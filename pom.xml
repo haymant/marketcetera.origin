@@ -49,11 +49,43 @@
         <scope>import</scope>
       </dependency>
       <!-- Compile: local modules -->
+      <!-- Compile: sa modules -->
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>remote-receiver</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>remote-emitter</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>saclient</artifactId>
+        <version>${project.version}</version>
+      </dependency>      
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>strategy</artifactId>
+        <version>${project.version}</version>
+      </dependency>            
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>strategyagent</artifactId>
+        <version>${project.version}</version>
+      </dependency>      
+      <!-- Compile: end sa modules -->
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>core</artifactId>
         <version>${project.version}</version>
-      </dependency>
+      </dependency>      
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>dataflow-api</artifactId>
@@ -1189,6 +1221,10 @@
     </profile>    
   </profiles>
   <modules>
+    <!-- Compile: sa modules -->
+    <module>saclient</module>
+    <module>strategyagent</module>
+    <!-- Compile: end sa modules -->
     <module>admin</module>
     <module>cluster</module>
     <module>core</module>

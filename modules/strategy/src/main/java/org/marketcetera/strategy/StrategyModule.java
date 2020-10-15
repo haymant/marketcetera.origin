@@ -69,14 +69,14 @@ import org.marketcetera.core.CloseableLock;
 import org.marketcetera.core.Util;
 import org.marketcetera.core.notifications.Notification;
 import org.marketcetera.core.position.PositionKey;
-import org.marketcetera.core.publisher.ISubscriber;
+import org.marketcetera.core.publisher.Subscriber;
 import org.marketcetera.core.publisher.PublisherEngine;
 import org.marketcetera.event.Event;
 import org.marketcetera.event.LogEvent;
 import org.marketcetera.event.LogEventLevel;
 import org.marketcetera.event.impl.LogEventBuilder;
 import org.marketcetera.marketdata.MarketDataRequest;
-import org.marketcetera.marketdata.core.manager.MarketDataManager;
+//todo lizhao: import org.marketcetera.marketdata.core.manager.MarketDataManager;
 import org.marketcetera.metrics.ThreadedMetric;
 import org.marketcetera.module.DataEmitter;
 import org.marketcetera.module.DataEmitterSupport;
@@ -1141,12 +1141,14 @@ final class StrategyModule
         @SuppressWarnings("resource")
         ApplicationContext context = ApplicationContainer.getInstance()==null?null:ApplicationContainer.getInstance().getContext();
         if(context != null) {
+            //todo lizhao: 
+            /*
             try {
                 marketDataManager = context.getBean(MarketDataManager.class);
             } catch (NoSuchBeanDefinitionException e) {
                 SLF4JLoggerProxy.debug(this,
                                        "No market data manager, falling back on market data module framework"); //$NON-NLS-1$
-            }
+            }*/
         }
         try {
             strategy = new StrategyImpl(name,
@@ -1396,6 +1398,9 @@ final class StrategyModule
      */
     private int doMarketDataRequest(MarketDataRequest inRequest)
     {
+        //todo lizhao: 
+        return 0;
+        /*
         try(CloseableLock closeableLock = CloseableLock.create(dataFlowLock.writeLock())) {
             closeableLock.lock();
             // this is the internal request ID that we pass back to the requester so it knows how to refer to this request
@@ -1406,7 +1411,7 @@ final class StrategyModule
                 if(marketDataManager != null) {
                     // hooray, we've got option #1 working for us, let's do that
                     long marketDataManagerRequestId = marketDataManager.requestMarketData(inRequest,
-                                                                                          new ISubscriber() {
+                                                                                          new Subscriber() {
                         @Override
                         public boolean isInteresting(Object inData)
                         {
@@ -1446,6 +1451,7 @@ final class StrategyModule
             }
             return internalRequestId;
         }
+        */
     }
     /**
      * Sets the event source on the given event.
@@ -1660,13 +1666,15 @@ final class StrategyModule
                     requestsByDataFlowId.remove(dataFlowId);
                 }
             } else {
+                //todo lizhao: 
+                /*
                 try {
                     if(marketDataManager != null) {
                         marketDataManager.cancelMarketDataRequest(marketDataRequestId);
                     }
                 } finally {
                     requestsByInternalId.remove(internalRequestId);
-                }
+                }*/
             }
         }
         /**
@@ -1700,7 +1708,7 @@ final class StrategyModule
      */
     @ClassVersion("$Id$")
     private class DataRequester
-            implements ISubscriber
+            implements Subscriber
     {
         /**
          * the subscriber
@@ -1746,7 +1754,7 @@ final class StrategyModule
             }
         }
         /* (non-Javadoc)
-         * @see org.marketcetera.core.publisher.ISubscriber#isInteresting(java.lang.Object)
+         * @see org.marketcetera.core.publisher.Subscriber#isInteresting(java.lang.Object)
          */
         @Override
         public boolean isInteresting(Object inData)
@@ -1754,7 +1762,7 @@ final class StrategyModule
             return true;
         }
         /* (non-Javadoc)
-         * @see org.marketcetera.core.publisher.ISubscriber#publishTo(java.lang.Object)
+         * @see org.marketcetera.core.publisher.Subscriber#publishTo(java.lang.Object)
          */
         @Override
         public void publishTo(Object inData)
@@ -1903,7 +1911,7 @@ final class StrategyModule
     /**
      * provides access to new market data services
      */
-    private MarketDataManager marketDataManager;
+    //todo lizhao: private MarketDataManager marketDataManager;
     /**
      * guards access to data flow structures
      */

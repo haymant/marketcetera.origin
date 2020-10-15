@@ -59,14 +59,6 @@
       </excludes>
     </fileSet>
     <fileSet>
-      <directory>src/test/sample_data/modules</directory>
-      <excludes>
-        <exclude>**/*.jar</exclude>
-        <exclude>**/*.properties</exclude>
-      </excludes>
-      <outputDirectory>strategyengine/modules</outputDirectory>
-    </fileSet>
-    <fileSet>
       <fileMode>0644</fileMode>
       <directory>src/main/sample_data/samples/ruby/inputs</directory>
       <outputDirectory>strategyengine/samples/ruby/commands</outputDirectory>
@@ -101,11 +93,4 @@
       <outputDirectory>strategyengine/src</outputDirectory>
     </fileSet>
   </fileSets>
-  <files>
-    <file>
-      <fileMode>0644</fileMode>
-      <source>src/test/sample_data/inputs/sampleCommands.txt</source>
-      <outputDirectory>strategyengine/samples/commands</outputDirectory>
-    </file>
-  </files>
 </assembly>

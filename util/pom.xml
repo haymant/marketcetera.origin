@@ -13,6 +13,29 @@
   <name>Utilities</name>
   <dependencies>
     <!-- Compile. -->
+    <!-- Compile: sa modules -->
+      <dependency>
+        <groupId>com.google.protobuf</groupId>
+        <artifactId>protobuf-java</artifactId>
+        <version>2.6.1</version>
+      </dependency>
+      <dependency>
+        <groupId>com.googlecode.protobuf-rpc-pro</groupId>
+        <artifactId>protobuf-streamer-pro</artifactId>
+        <version>1.2.3</version>
+        <exclusions>
+          <exclusion>
+            <groupId>io.netty</groupId>
+            <artifactId>netty</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>com.googlecode.protobuf-rpc-pro</groupId>
+        <artifactId>protobuf-rpc-pro-duplex</artifactId>
+        <version>3.2.2</version>
+      </dependency>      
+    <!-- Compile: end sa modules -->    
     <dependency>
       <groupId>org.quickfixj</groupId>
       <artifactId>quickfixj-all</artifactId>

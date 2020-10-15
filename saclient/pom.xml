@@ -18,7 +18,7 @@
   <parent>
       <groupId>org.marketcetera</groupId>
       <artifactId>public-parent</artifactId>
-      <version>4.0.0-SNAPSHOT</version>
+      <version>4.0.2-SNAPSHOT</version>
   </parent>
   <artifactId>saclient</artifactId>
   <packaging>jar</packaging>
@@ -35,8 +35,31 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>remote-emitter</artifactId>
+      <version>${project.version}</version>
     </dependency>
-
+    <!-- Compile: sa modules -->
+      <dependency>
+        <groupId>com.google.protobuf</groupId>
+        <artifactId>protobuf-java</artifactId>
+        <version>2.6.1</version>
+      </dependency>
+      <dependency>
+        <groupId>com.googlecode.protobuf-rpc-pro</groupId>
+        <artifactId>protobuf-streamer-pro</artifactId>
+        <version>1.2.3</version>
+        <exclusions>
+          <exclusion>
+            <groupId>io.netty</groupId>
+            <artifactId>netty</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>com.googlecode.protobuf-rpc-pro</groupId>
+        <artifactId>protobuf-rpc-pro-duplex</artifactId>
+        <version>3.2.2</version>
+      </dependency>      
+    <!-- Compile: end sa modules -->
     <!-- Runtime. -->
     <dependency>
       <groupId>org.apache.activemq</groupId>
@@ -58,7 +81,7 @@
     </dependency>
 
     <!-- Testing. -->
-    <dependency>
+    <!--<dependency>
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-rt-transports-http-jetty</artifactId>
       <scope>test</scope>
@@ -90,7 +113,7 @@
       <groupId>${project.groupId}</groupId>
       <artifactId>client</artifactId>
       <type>test-jar</type>
-    </dependency>
+    </dependency>-->
   </dependencies>
 
   <build>

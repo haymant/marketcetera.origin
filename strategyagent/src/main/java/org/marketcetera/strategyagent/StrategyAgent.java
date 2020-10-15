@@ -22,7 +22,7 @@ import org.marketcetera.core.notifications.INotification;
 import org.marketcetera.core.notifications.Notification;
 import org.marketcetera.core.notifications.NotificationExecutor;
 import org.marketcetera.core.publisher.IPublisher;
-import org.marketcetera.core.publisher.ISubscriber;
+import org.marketcetera.core.publisher.Subscriber;
 import org.marketcetera.core.publisher.PublisherEngine;
 import org.marketcetera.module.DataFlowID;
 import org.marketcetera.module.ModuleException;
@@ -97,7 +97,7 @@ public class StrategyAgent
      * @see org.marketcetera.core.publisher.IPublisher#subscribe(org.marketcetera.core.publisher.ISubscriber)
      */
     @Override
-    public void subscribe(ISubscriber inSubscriber)
+    public void subscribe(Subscriber inSubscriber)
     {
         dataPublisher.subscribe(inSubscriber);
     }
@@ -105,7 +105,7 @@ public class StrategyAgent
      * @see org.marketcetera.core.publisher.IPublisher#unsubscribe(org.marketcetera.core.publisher.ISubscriber)
      */
     @Override
-    public void unsubscribe(ISubscriber inSubscriber)
+    public void unsubscribe(Subscriber inSubscriber)
     {
         dataPublisher.unsubscribe(inSubscriber);
     }

@@ -18,7 +18,7 @@
   <parent>
     <groupId>org.marketcetera</groupId>
     <artifactId>remote</artifactId>
-    <version>4.0.0-SNAPSHOT</version>
+    <version>4.0.2-SNAPSHOT</version>
   </parent>
   <artifactId>remote-emitter</artifactId>
   <packaging>jar</packaging>
@@ -49,7 +49,7 @@
     </dependency>
 
     <!-- Testing. -->
-    <dependency>
+    <!--<dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>core</artifactId>
       <type>test-jar</type>
@@ -77,7 +77,7 @@
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-rt-transports-http-jetty</artifactId>
       <scope>test</scope>
-    </dependency>
+    </dependency>-->
   </dependencies>
 
   <build>

@@ -139,7 +139,7 @@ public class LiveOrderHistoryManager
         // snapshotReports contains all the reports as dictated by the origin date
         if(!snapshotReports.isEmpty()) {
             for(ReportBase report : snapshotReports) {
-                LiveOrderHistoryManager.super.add(report);
+                //todo lizhao LiveOrderHistoryManager.super.add(report);
             }
             snapshotReports.clear();
             SLF4JLoggerProxy.debug(LiveOrderHistoryManager.class,
@@ -150,12 +150,12 @@ public class LiveOrderHistoryManager
             @Override
             public void run()
             {
-                try {
+                //todo lizhao try {
                     while(isRunning) {
                         // process any updates that exist
-                        add(updateReports.take());
+                        //todo lizhao add(updateReports.take());
                     }
-                } catch (InterruptedException ignored) {}
+                //todo lizhao } catch (InterruptedException ignored) {}
             }
         },
         "LiveOrderHistoryManager Report Processor"); //$NON-NLS-1$
