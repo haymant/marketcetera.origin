@@ -1248,7 +1248,7 @@
       <id>internal</id>
       <url>https://repo.marketcetera.org/maven</url>
       <snapshots>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
       </snapshots>
     </repository>
     <repository>

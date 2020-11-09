@@ -1,0 +1,70 @@
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 Oct19 ?        00:00:03 /lib/systemd/systemd --system-unit=basic.target
+root          31       1  0 Oct19 ?        00:00:03 /lib/systemd/systemd-journald
+root          53       1  0 Oct19 ?        00:00:01 /lib/systemd/systemd-udevd
+root          67       1  0 Oct19 ?        00:00:04 snapfuse /var/lib/snapd/snaps/snapd_9607.snap /snap/snapd/9607 -o ro,nodev,allow_other,suid
+root          69       1  0 Oct19 ?        00:00:01 snapfuse /var/lib/snapd/snaps/core18_1885.snap /snap/core18/1885 -o ro,nodev,allow_other,suid
+root          70       1  0 Oct19 ?        00:02:15 snapfuse /var/lib/snapd/snaps/eclipse_48.snap /snap/eclipse/48 -o ro,nodev,allow_other,suid
+systemd+      98       1  0 Oct19 ?        00:00:00 /lib/systemd/systemd-networkd
+root          99       1  0 Oct19 ?        00:00:03 /usr/lib/accountsservice/accounts-daemon
+avahi        100       1  0 Oct19 ?        00:00:01 avahi-daemon: running [Lee-A485-2.local]
+message+     102       1  0 Oct19 ?        00:00:01 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         103       1  0 Oct19 ?        00:00:03 /usr/sbin/NetworkManager --no-daemon
+root         106       1  0 Oct19 ?        00:00:00 /usr/lib/policykit-1/polkitd --no-debug
+syslog       108       1  0 Oct19 ?        00:00:01 /usr/sbin/rsyslogd -n -iNONE
+root         111       1  0 Oct19 ?        00:00:00 /usr/libexec/switcheroo-control
+root         113       1  0 Oct19 ?        00:00:00 /lib/systemd/systemd-logind
+root         114       1  0 Oct19 ?        00:00:00 /usr/lib/udisks2/udisksd
+root         115       1  0 Oct19 ?        00:00:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+avahi        116     100  0 Oct19 ?        00:00:00 avahi-daemon: chroot helper
+root         171       1  0 Oct19 ?        00:00:00 /usr/sbin/ModemManager --filter-policy=strict
+systemd+     221       1  0 Oct19 ?        00:00:01 /lib/systemd/systemd-resolved
+root         294       1  0 Oct19 ?        00:02:25 /usr/bin/containerd
+root         296       0  0 Oct19 pts/0    00:00:00 /bin/login -p -f     'HOSTTYPE=x86_64' 'PWD=/home/lee' 'TERM=xterm-256color' 'WSLENV=BASH_ENV/u' 'WSL_DISTRO_NAME=Ubuntu' 'WSL_INTEROP=/run/WSL/7_interop'
+root         329       1  0 Oct19 ?        00:00:00 /usr/sbin/cron -f
+daemon       349       1  0 Oct19 ?        00:00:00 /usr/sbin/atd -f
+root         376       1  0 Oct19 tty7     00:00:00 /sbin/agetty -o -p -- \u --noclear --keep-baud console 115200,38400,9600 xterm-256color
+root         381       1  0 Oct19 tty1     00:00:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root         387       1  0 Oct19 ?        00:00:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+postgres     508       1  0 Oct19 ?        00:00:04 /usr/lib/postgresql/12/bin/postgres -D /var/lib/postgresql/12/main -c config_file=/etc/postgresql/12/main/postgresql.conf
+root         535       1  0 Oct19 ?        00:00:06 /usr/sbin/apache2 -k start
+lee          594       1  0 Oct19 ?        00:00:00 /lib/systemd/systemd --user
+lee          595     594  0 Oct19 ?        00:00:00 (sd-pam)
+lee          615     594  0 Oct19 ?        00:00:00 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+lee          620     296  0 Oct19 pts/0    00:00:00 -bash
+rtkit        628       1  0 Oct19 ?        00:00:03 /usr/libexec/rtkit-daemon
+lee          740     594  0 Oct19 ?        00:00:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+postgres     806     508  0 Oct19 ?        00:00:01 postgres: 12/main: checkpointer   
+postgres     807     508  0 Oct19 ?        00:00:02 postgres: 12/main: background writer   
+postgres     808     508  0 Oct19 ?        00:00:17 postgres: 12/main: walwriter   
+postgres     809     508  0 Oct19 ?        00:00:03 postgres: 12/main: autovacuum launcher   
+postgres     810     508  0 Oct19 ?        00:00:06 postgres: 12/main: stats collector   
+postgres     811     508  0 Oct19 ?        00:00:00 postgres: 12/main: logical replication launcher   
+lee         1056     594  0 Oct19 ?        00:00:00 /usr/libexec/at-spi-bus-launcher
+lee         1061    1056  0 Oct19 ?        00:00:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+lee         1064     594  0 Oct19 ?        00:00:00 /usr/libexec/gvfsd
+lee         1071     594  0 Oct19 ?        00:00:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+root        1210       1  0 Oct19 ?        00:00:04 /usr/lib/upower/upowerd
+root        3164       0  0 Oct19 pts/2    00:00:00 /bin/login -p -f     'HOSTTYPE=x86_64' 'PWD=/home/lee' 'TERM=xterm-256color' 'WSLENV=BASH_ENV/u' 'WSL_DISTRO_NAME=Ubuntu' 'WSL_INTEROP=/run/WSL/3607_interop'
+lee         3191    3164  0 Oct19 pts/2    00:00:00 -bash
+root        3558       1  0 Oct19 ?        00:00:31 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        8046       0  0 Oct20 pts/3    00:00:00 /bin/login -p -f     'HOSTTYPE=x86_64' 'PWD=/home/lee' 'TERM=xterm-256color' 'WSLENV=BASH_ENV/u' 'WSL_DISTRO_NAME=Ubuntu' 'WSL_INTEROP=/run/WSL/13719_interop'
+lee         8074    8046  0 Oct20 pts/3    00:00:01 -bash
+root       74496       1  0 06:56 ?        00:00:06 snapfuse /var/lib/snapd/snaps/snapd_9721.snap /snap/snapd/9721 -o ro,nodev,allow_other,suid
+root       74502       1  0 06:56 ?        00:00:03 /usr/lib/snapd/snapd
+root       74895       1  0 07:01 ?        00:00:00 /usr/sbin/cupsd -l
+root       74898       1  0 07:01 ?        00:00:00 /usr/sbin/cups-browsed
+www-data   74923     535  0 07:01 ?        00:00:00 /usr/sbin/apache2 -k start
+www-data   74924     535  0 07:01 ?        00:00:00 /usr/sbin/apache2 -k start
+lee        87611    8074  0 12:05 pts/3    00:00:00 npm
+lee        87622   87611  0 12:05 pts/3    00:00:00 sh -c npm run serve
+lee        87623   87622  0 12:05 pts/3    00:00:00 npm
+lee        87636   87623  0 12:05 pts/3    00:00:00 sh -c vue-cli-service serve --open --port 3000
+lee        87637   87636  0 12:05 pts/3    00:00:42 node /home/lee/git/litebook/node_modules/.bin/vue-cli-service serve --open --port 3000
+lee        95311    3191  0 13:18 pts/2    00:00:00 /snap/eclipse/48/eclipse 2
+lee        95353   95311 10 13:18 pts/2    00:00:43 /usr/bin/java -Dosgi.requiredJavaVersion=1.8 -Dosgi.instance.area.default=@user.home/eclipse-workspace -XX:+UseG1GC -XX:+UseStringDeduplication -Dosgi.requiredJavaVersion=1.8 -Dosgi.dataAreaRequiresExplicitInit=true -Xms256m -Xmx1024m -jar /snap/eclipse/48//plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar -os linux -ws gtk -arch x86_64 -showsplash /snap/eclipse/48//plugins/org.eclipse.epp.package.common_4.14.0.20191212-1200/splash.bmp -launcher /snap/eclipse/48/eclipse -name Eclipse --launcher.library /snap/eclipse/48//plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.1100.v20190907-0426/eclipse_1801.so -startup /snap/eclipse/48//plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar --launcher.appendVmargs -exitdata 88001 -product org.eclipse.epp.package.java.product 2 -vm /usr/bin/java -vmargs -Dosgi.requiredJavaVersion=1.8 -Dosgi.instance.area.default=@user.home/eclipse-workspace -XX:+UseG1GC -XX:+UseStringDeduplication -Dosgi.requiredJavaVersion=1.8 -Dosgi.dataAreaRequiresExplicitInit=true -Xms256m -Xmx1024m -jar /snap/eclipse/48//plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar
+lee        95625    3191  0 13:20 pts/2    00:00:00 /snap/eclipse/48/eclipse 2
+lee        95667   95625 99 13:20 pts/2    00:05:18 /usr/bin/java -Dosgi.requiredJavaVersion=1.8 -Dosgi.instance.area.default=@user.home/eclipse-workspace -XX:+UseG1GC -XX:+UseStringDeduplication -Dosgi.requiredJavaVersion=1.8 -Dosgi.dataAreaRequiresExplicitInit=true -Xms256m -Xmx1024m -jar /snap/eclipse/48//plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar -os linux -ws gtk -arch x86_64 -showsplash /snap/eclipse/48//plugins/org.eclipse.epp.package.common_4.14.0.20191212-1200/splash.bmp -launcher /snap/eclipse/48/eclipse -name Eclipse --launcher.library /snap/eclipse/48//plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.1100.v20190907-0426/eclipse_1801.so -startup /snap/eclipse/48//plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar --launcher.appendVmargs -exitdata a0002 -product org.eclipse.epp.package.java.product 2 -vm /usr/bin/java -vmargs -Dosgi.requiredJavaVersion=1.8 -Dosgi.instance.area.default=@user.home/eclipse-workspace -XX:+UseG1GC -XX:+UseStringDeduplication -Dosgi.requiredJavaVersion=1.8 -Dosgi.dataAreaRequiresExplicitInit=true -Xms256m -Xmx1024m -jar /snap/eclipse/48//plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar
+lee        96075   95667 15 13:22 pts/2    00:00:23 /usr/local/jdk1.8.0_261/bin/java -Dmaven.home=EMBEDDED -Dclassworlds.conf=/home/lee/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf1884686083106330805.tmp -Dmaven.multiModuleProjectDirectory=/home/lee/git/marketcetera/packages/dare-package -Dfile.encoding=UTF-8 -classpath /snap/eclipse/48/plugins/org.eclipse.m2e.maven.runtime_1.14.0.20191209-1923/jars/plexus-classworlds-2.6.0.jar org.codehaus.plexus.classworlds.launcher.Launcher -Pdefault,execute -B -X -e exec:java
+lee        96105   96075 18 13:22 pts/2    00:00:27 [java] <defunct>
+lee        96168     620  0 13:25 pts/0    00:00:00 ps -ef
